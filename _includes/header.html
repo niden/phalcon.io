@@ -176,31 +176,7 @@
             </div>
 
             <div class="header__right">
-                <div class="header__lang expand">
-                    <img class="flag-item"
-                         src="/assets/images/flags/{{ page.language }}.png"
-                         alt="{{ page.language }}">
-                    <div class="header-dropdown-wrapper">
-                        <ul class="header-dropdown header-dropdown--cat">
-                            {% assign fromLink = '/' | append: page.language %}
-                            {% assign languageData = site.data.languages | sort %}
-                            {% for lang in languageData %}
-                            {% assign menuPage = page.permalink | replace: fromLink, '' %}
-                            <li>
-                                <a href="/{{ lang[0] }}{{ menuPage }}">
-                                    {{ lang[1]['language_text'] }}
-                                </a>
-                                <a href="/{{ lang[0] }}{{ menuPage }}">
-                                    <div class="header-dropdown__count">
-                                        <img class="flag-item"
-                                             src="/assets/images/flags/{{ lang[0] }}.png"
-                                             alt="{{ lang[1]['language_text'] }}">
-                                    </div>
-                                </a>
-                            </li>{% endfor %}
-                        </ul>
-                    </div>
-                </div>
+                {% include menu-language.html %}
 
                 <input type="text" class="header__search" placeholder="Search...">
                 <div class="header__github">
