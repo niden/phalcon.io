@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+
+<div class="wrapper">
+    <div class="info info--team">
+        <div class="container">
+            {% include menu-team.html %}
+            <hr>
+
+            <div class="info-block">
+                <div class="info-block__img">
+                    <img src="/assets/images/team/ruud.jpg" alt="Ruud Boon">
+                </div>
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        Ruud Boon
+                    </h2>
+                    <p>{{ site.data.languages[page.language]['team_ruud_1'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_ruud_2'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_ruud_3'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_ruud_4'] }}</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block__img">
+                    <img src="/assets/images/team/nikos.jpg" alt="Nikolaos (Nikos) Dimopoulos">
+                </div>
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        Nikolaos (Nikos) Dimopoulos
+                    </h2>
+
+                    <p>{{ site.data.languages[page.language]['team_nikos_1'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_nikos_2'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_nikos_3'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_nikos_4'] }}</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block__img">
+                    <img src="/assets/images/team/serghei.png" alt="Serghei Iakovlev">
+                </div>
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        Serghei Iakovlev
+                    </h2>
+
+                    <p>{{ site.data.languages[page.language]['team_serghei_1'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_serghei_2'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_serghei_3'] }}</p>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block__img">
+                    <img src="/assets/images/team/paulscoder.jpg" alt="Paul Scarrone">
+                </div>
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        Paul Scarrone
+                    </h2>
+
+                    <p>
+                        <a href="https://twitter.com/PaulSCoder">Twitter</a>
+                        |
+                        <a href="https://github.com/ninjapanzer">Github</a>
+                    </p>
+
+                    <p>{{ site.data.languages[page.language]['team_paul_1'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_paul_2'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_paul_3'] }}</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="info-block">
+                <div class="info-block__img">
+                    <img src="/assets/images/team/andres.jpg" alt="Andres Gutierrez">
+                </div>
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        Andres Gutierrez (special mention)
+                    </h2>
+
+                    <p>{{ site.data.languages[page.language]['team_andres_1'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_andres_2'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_andres_3'] }}</p>
+                    <p>{{ site.data.languages[page.language]['team_andres_4'] }}</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="info-block">
+                <div class="info-block__content">
+                    <h2 class="info-block__title">
+                        {{ site.data.languages[page.language]['contributors'] }}
+                    </h2>
+
+                    <p>
+                        {{ site.data.languages[page.language]['contributors_description'] }}
+                    </p>
+
+                    <div class="contributors__list-wrap">
+                        <div class="contributors__list">
+                            {% for username in site.data.contributors %}
+                            <a title="{{ username }}"
+                               class="contributors__list-item"
+                               href="https://github.com/{{ username }}">
+                                <img src="/assets/images/contributors/{{ username }}.jpg"
+                                     alt="{{ username }}"/>
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
